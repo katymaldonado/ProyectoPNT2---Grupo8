@@ -13,13 +13,13 @@
 
         <div class="centrado">
             <div>
-                <router-link to="/Login">Ingresar</router-link>
+                <router-link to="/">Ingresar</router-link>
             </div>
         </div>
     </div>
     <div>
         <nav class="centrado">
-            <router-link to="/">Inicio</router-link>
+            <router-link to="/home">Inicio</router-link>
             <router-link to="/Products">Productos</router-link>
 
         </nav>
