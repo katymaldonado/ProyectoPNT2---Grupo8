@@ -13,7 +13,7 @@
 
         <div class="centrado">
             <div>
-                <router-link to="/Login">Ingresar</router-link>
+                <router-link to="/">Ingresar</router-link>
             </div>
         </div>
     </div>

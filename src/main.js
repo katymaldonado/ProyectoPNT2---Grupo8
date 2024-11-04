@@ -10,11 +10,11 @@ import Products from './components/Products.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '/home',
         component: Home
     },
     {
-        path: '/login',
+        path: '/',
         component: Login
     },
     {
