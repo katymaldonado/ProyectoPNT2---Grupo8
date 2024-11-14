@@ -1,19 +1,107 @@
 <script setup>
-import Navegador from './components/elements/Navegador.vue';
+
+import { ref } from 'vue';
+import { productos } from './main';
+import { createApp } from 'vue';
+
+
+const buscador = ref("Buscar")
+
+console.log(productos);
+import { provide } from 'vue'
+
+provide(/* key */ 'productos', /* value */ productos)
 </script>
 
 <template>
   <div id="app">
     <header>
-      <Navegador></Navegador>
+      <div class="centrado" id="c2">
+        <div class="centrado">
+          <form action="">
+            <input type="text" v-model="buscador">
+            <button><i class='bx bx-search-alt-2'></i></button>
+          </form>
+        </div>
+
+        <div id="logo" class="centrado">
+          <img src="/src/assets/logo.png" alt="logo">
+        </div>
+
+        <div class="centrado" id="ingreso">
+          <div>
+            <router-link to="/">CREAR CUENTA</router-link>
+
+            <router-link to="/">INGRESAR</router-link>
+          </div>
+        </div>
+      </div>
+      <div>
+        <nav class="centrado">
+          <router-link to="/home">INICIO</router-link>
+          <router-link to="/home">NOSOTROS</router-link>
+          <router-link to="/products" :to="{ name: 'Products', params: { productos: JSON.stringify(pastelesYPostres) } }">PRODUCTOS</router-link>
+          <router-link to="/home">POLITICA DE DEVOLUCION</router-link>
+
+        </nav>
+      </div>
     </header>
     <main>
 
-      <RouterView></RouterView>
+      <RouterView ></RouterView>
 
     </main>
     <footer></footer>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#c2 {
+  justify-content: space-around;
+  font-size: 15px;
+  margin-bottom: 1%;
+}
+
+a {
+  border-bottom: 1px black solid;
+}
+
+.centrado div {
+  width: 40%;
+}
+
+#logo {
+  width: 40%;
+}
+
+.bx {
+  background-color: none !important;
+}
+
+input {
+  border: none;
+  border-bottom: black 1px solid;
+  width: 130px;
+}
+
+button {
+  border-bottom: black 1px solid;
+}
+
+img {
+  width: 45%;
+}
+
+#ingreso a {
+  font-size: 11px;
+  color: rgb(67, 67, 67) !important;
+}
+
+a:hover {
+  color: rgb(168, 168, 168);
+}
+
+a:checked {
+  color: rgb(168, 168, 168);
+}
+</style>
