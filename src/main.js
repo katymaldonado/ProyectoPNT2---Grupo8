@@ -48,14 +48,20 @@ const routes = [
     {
         path: '/products',
         component: Products
+    },
+    ,
+    {
+        path: '/products/:id',
+        component: Products
     }
 ]
 
 
 
 const router = createRouter({
-    routes,
     history: createWebHistory(),
+    routes,
+    
 });
 
 router.beforeEach((to, from) => {

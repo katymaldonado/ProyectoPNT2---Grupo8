@@ -28,17 +28,18 @@ main{
 }
 .producto-card{
   width: 20%;
-  height: 270px;
+  height: 290px;
   border: 0.5px  black solid;
   margin: 2% 0%;
   padding: 3%;
   padding-top: 0.1%;
   flex-direction: column;
 }
+
 .producto-imagen{
   width: 230px;
   height: 190px;
-  padding: 4%;
+ 
 }
 .producto-imagen img{
   width: 100%;
@@ -47,4 +48,29 @@ main{
 
 .filtros{
   margin: 0;
+}
+.producto-card button{
+
+    background-color: rgb(216, 172, 132); 
+    color: #ffffff; 
+    font-size: 12px; 
+    font-weight: bold; 
+    margin-top: 3%;
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.producto-card button:hover {
+    background-color:rgb(216, 172, 132);
+    transform: scale(1.05);
+}
+
+.producto-card button:active {
+    background-color: rgb(216, 172, 132) ; 
+    transform: scale(0.98); 
 }

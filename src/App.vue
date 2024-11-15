@@ -30,18 +30,18 @@ provide(/* key */ 'productos', /* value */ productos)
 
         <div class="centrado" id="ingreso">
           <div>
-            <router-link to="/">CREAR CUENTA</router-link>
+            <router-link to="/"><span>CREAR CUENTA</span></router-link>
 
-            <router-link to="/">INGRESAR</router-link>
+            <router-link to="/"><span>INGRESAR</span></router-link>
           </div>
         </div>
       </div>
       <div>
         <nav class="centrado">
-          <router-link to="/home">INICIO</router-link>
-          <router-link to="/home">NOSOTROS</router-link>
-          <router-link to="/products" :to="{ name: 'Products', params: { productos: JSON.stringify(pastelesYPostres) } }">PRODUCTOS</router-link>
-          <router-link to="/home">POLITICA DE DEVOLUCION</router-link>
+          <router-link to="/home"><span>INICIO</span></router-link>
+          <router-link to="/home"><span>NOSOTROS</span></router-link>
+          <router-link to="/products" ><span>PRODUCTOS</span></router-link>
+          <router-link to="/home"><span>POLITICA DE DEVOLUCION</span></router-link>
 
         </nav>
       </div>
@@ -62,7 +62,7 @@ provide(/* key */ 'productos', /* value */ productos)
   margin-bottom: 1%;
 }
 
-a {
+span  {
   border-bottom: 1px black solid;
 }
 
